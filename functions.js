@@ -6,9 +6,11 @@
  * e.g.
  * greet("Michael") logs "Hello Michael"
  */
+
 function greet(name) {
-  // Your code here
+  console.log(`Hello ${name}`);
 }
+greet("Yousif");
 
 /**
  * isOdd(n):
@@ -20,8 +22,18 @@ function greet(name) {
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  // Your code here
+  if (n % 2 === 1) {
+    return true;
+  } else if (n % 2 === 0) {
+    return false;
+  } else {
+    console.log(`Your number is neither even nor odd`);
+  }
 }
+
+isOdd(5);
+isOdd(4);
+isOdd(4335434534);
 
 /**
  * oddsSmallerThan(n):
@@ -32,8 +44,13 @@ function isOdd(n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
+
 function oddsSmallerThan(n) {
-  // Your code here
+  if (isOdd(n) === true) {
+    return (n - 1) / 2;
+  } else if (isOdd(n) === false) {
+    return n / 2;
+  }
 }
 
 /**
@@ -46,8 +63,14 @@ function oddsSmallerThan(n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
+
 function squareOrDouble(n) {
-  // Your code here
+  if (isOdd(n) === true) {
+    return n * n;
+  } else if (isOdd(n) === false) {
+    return n * 2;
+  }
 }
+squareOrDouble(2);
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
